@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odza Basketball Academy (OBA)</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- HEADER -->
+  <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <!-- Logo stylisé -->
+      <h1 class="text-2xl font-extrabold tracking-wider">
+        <span class="text-blue-700">O</span><span class="text-red-600">B</span><span class="text-blue-700">A</span>
+      </h1>
+
+      <!-- Navigation -->
+      <nav id="navMenu" class="hidden md:flex space-x-6 text-gray-700 font-medium">
+        <a href="#about" class="hover:text-blue-700 transition">À propos</a>
+        <a href="#valeurs" class="hover:text-blue-700 transition">Valeurs</a>
+        <a href="#actualites" class="hover:text-blue-700 transition">Actualités</a>
+        <a href="#partenaires" class="hover:text-blue-700 transition">Partenaires</a>
+        <a href="#contact" class="hover:text-blue-700 transition">Contact</a>
+      </nav>
+
+      <!-- Bouton menu mobile -->
+      <button id="menuBtn" class="md:hidden text-gray-700 focus:outline-none text-2xl">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Menu mobile -->
+    <div id="mobileMenu" class="hidden bg-white shadow-md md:hidden">
+      <a href="#about" class="block py-2 px-4 border-b hover:bg-gray-100">À propos</a>
+      <a href="#valeurs" class="block py-2 px-4 border-b hover:bg-gray-100">Valeurs</a>
+      <a href="#actualites" class="block py-2 px-4 border-b hover:bg-gray-100">Actualités</a>
+      <a href="#partenaires" class="block py-2 px-4 border-b hover:bg-gray-100">Partenaires</a>
+      <a href="#contact" class="block py-2 px-4 hover:bg-gray-100">Contact</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-cover bg-center h-screen flex flex-col justify-center items-center text-center text-white pt-20"
+    style="background-image: url('https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1600&q=80');">
+    <div class="bg-black bg-opacity-50 p-6 rounded-xl" data-aos="zoom-in">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Odza Basketball Academy</h2>
+      <p class="text-lg md:text-2xl mb-6">Former les champions de demain, sur le terrain et dans la vie</p>
+      <a href="#contact" class="bg-red-600 px-6 py-3 rounded-lg text-white font-semibold hover:bg-red-500 transition">Découvrir plus</a>
+    </div>
+  </section>
+
+  <!-- À PROPOS -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6 grid md:grid-cols-2 gap-10 items-center" data-aos="fade-up">
+      <div>
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">À propos de nous</h2>
+        <p class="text-gray-700 leading-relaxed mb-4">
+          Fondée en <span class="font-semibold text-red-600">2023</span>, l’<strong>Odza Basketball Academy (OBA)</strong> est un centre de formation dédié à l’apprentissage et au développement du basketball chez les jeunes. 
+          Nous formons les joueurs à la discipline, au respect et à la performance tout en favorisant leur éducation et leur épanouissement.
+        </p>
+        <p class="text-gray-700">Coach principal : <strong class="text-blue-700">Jimmy Erwan NGAMI</strong></p>
+      </div>
+      <div class="flex justify-center" data-aos="fade-left">
+        <img src="images/coach_jimmy.JPG" alt="Coach Jimmy Erwan NGAMI" class="rounded-xl shadow-lg w-80 h-80 object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- NOS VALEURS -->
+  <section id="valeurs" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center text-blue-700 mb-12" data-aos="fade-up">Nos valeurs</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-lg p-6 rounded-xl text-center" data-aos="fade-right">
+          <img src="images/discipline.jpg" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
+          <h3 class="text-xl font-semibold text-red-600 mb-3">Discipline</h3>
+          <p>Nous inculquons la rigueur et la constance, sur le terrain comme dans la vie quotidienne.</p>
+        </div>
+        <div class="bg-white shadow-lg p-6 rounded-xl text-center" data-aos="fade-up">
+          <img src="images/album1.jpg" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
+          <h3 class="text-xl font-semibold text-red-600 mb-3">Esprit d’équipe</h3>
+          <p>Nous valorisons la solidarité et la cohésion, car la victoire se construit ensemble.</p>
+        </div>
+        <div class="bg-white shadow-lg p-6 rounded-xl text-center" data-aos="fade-left">
+          <img src="images/exellence.jpg" class="rounded-lg mb-4 mx-auto h-40 w-full object-cover">
+          <h3 class="text-xl font-semibold text-red-600 mb-3">Excellence</h3>
+          <p>Nous poussons chacun à donner le meilleur de soi-même pour atteindre ses objectifs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTUALITÉS -->
+  <section id="actualites" class="py-20 bg-white">
+    <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-blue-700 mb-10">Actualités</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
+          <img src="images/album3.jpg" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2">Tournoi Inter-Académies</h3>
+            <p class="text-sm text-gray-600">OBA participera aux tournoi U10, U14, U18, U20 cette saison.</p>
+          </div>
+        </div>
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
+          <img src="images/evenement.png" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2">Nouvelles recrues</h3>
+            <p class="text-sm text-gray-600">De jeunes talents rejoignent l’académie pour la saison 2025.</p>
+          </div>
+        </div>
+        <div class="bg-gray-50 shadow-md rounded-lg overflow-hidden">
+          <img src="images/wa.jpg" class="h-48 w-full object-cover">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2">Programme vacances 2025</h3>
+            <p class="text-sm text-gray-600">Un camp d’été unique mêlant basketball, discipline et fun !</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS & PARTENAIRES -->
+  <section id="partenaires" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-blue-700 mb-10">Sponsors & Partenaires</h2>
+      <div class="flex flex-wrap justify-center gap-10">
+        <img src="images/fecabasket.png" alt="fecabasket" class="h-16 grayscale hover:grayscale-0 transition">
+        <img src="images/andy jo.png" alt="andyJO" class="h-16 grayscale hover:grayscale-0 transition">
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-20 bg-blue-700 text-white text-center">
+    <div class="container mx-auto px-6" data-aos="fade-up">
+      <h2 class="text-3xl font-bold mb-6">Rejoignez-nous dès aujourd’hui</h2>
+      <p class="max-w-2xl mx-auto mb-8">Contactez-nous sur WhatsApp ou retrouvez-nous sur nos réseaux sociaux.</p>
+      <a href="https://wa.me/237XXXXXXXXX" target="_blank" class="bg-red-500 hover:bg-red-400 px-8 py-3 rounded-lg text-lg font-semibold transition inline-block mb-8">📱 Contacter le coach</a>
+      <div class="flex justify-center space-x-6 text-2xl">
+        <a href="#" class="hover:text-red-400"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="hover:text-red-400"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-400 text-center py-6">
+    <p>&copy; 2025 Odza Basketball Academy. Tous droits réservés.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+    document.getElementById("menuBtn").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
