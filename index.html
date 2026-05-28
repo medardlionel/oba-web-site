@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Odza Basketball Academy (OBA)</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af',
+            secondary: '#dc2626',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .fade-up{opacity:0;transform:translateY(30px);animation:fadeUp 1s ease forwards}
+    .fade-left{opacity:0;transform:translateX(-30px);animation:fadeLeft 1s ease forwards}
+    .fade-right{opacity:0;transform:translateX(30px);animation:fadeRight 1s ease forwards}
+    @keyframes fadeUp{to{opacity:1;transform:none}}
+    @keyframes fadeLeft{to{opacity:1;transform:none}}
+    @keyframes fadeRight{to{opacity:1;transform:none}}
+  </style>
+</head>
+
+<body class="font-sans text-gray-800 bg-gradient-to-br from-blue-50 via-white to-red-50">
+
+<!-- ================= HEADER ================= -->
+<header class="bg-white/80 backdrop-blur shadow sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold text-primary">Odza Basketball Academy</h1>
+
+    <!-- Mobile menu button -->
+    <button id="menuBtn" class="md:hidden text-secondary text-2xl font-bold">
+      ☰
+    </button>
+
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex space-x-6 font-semibold">
+      <a href="#about" class="text-primary hover:text-secondary">À propos</a>
+      <a href="#programmes" class="text-primary hover:text-secondary">Programmes</a>
+      <a href="#gallery" class="text-primary hover:text-secondary">Galerie</a>
+      <a href="#evenements" class="text-primary hover:text-secondary">Événements</a>
+      <a href="#contact" class="text-primary hover:text-secondary">Contact</a>
+    </nav>
+  </div>
+
+  <!-- Mobile nav -->
+  <nav id="mobileMenu" class="hidden md:hidden bg-white border-t">
+    <a href="#about" class="block px-6 py-3 border-b">À propos</a>
+    <a href="#programmes" class="block px-6 py-3 border-b">Programmes</a>
+    <a href="#gallery" class="block px-6 py-3 border-b">Galerie</a>
+    <a href="#evenements" class="block px-6 py-3 border-b">Événements</a>
+    <a href="#contact" class="block px-6 py-3">Contact</a>
+  </nav>
+</header>
+
+<script>
+  const btn = document.getElementById('menuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+</script>
+
+<!-- ================= HERO ================= -->
+<section class="relative">
+  <img src="images/header.webp" class="w-full h-[80vh] object-cover" />
+  <div class="absolute inset-0 bg-primary/70"></div>
+  <div class="absolute inset-0 flex items-center justify-center text-center text-white px-4">
+    <div class="fade-up max-w-3xl">
+      <h2 class="text-4xl md:text-5xl font-extrabold">Former des basketteurs, bâtir des valeurs</h2>
+      <p class="mt-6 text-lg">Discipline · Travail · Camaraderie · Constance</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="fade-left">
+      <h3 class="text-3xl font-extrabold text-secondary">Qui est OBA ?</h3>
+      <p class="mt-6 text-gray-700">
+        Fondée en <strong>2022</strong> par <strong>Coach Jimmy</strong>, l’Odza Basketball Academy (OBA)
+        est une académie dédiée à la formation des jeunes. Elle compte aujourd’hui
+        <strong>02 coachs</strong> : Coach Jimmy (fondateur & coach principal) et Coach Michel (assistant).
+      </p>
+      <p class="mt-4 text-gray-700">
+        L’aventure a commencé par un <strong>camp de vacances</strong> visant à réveiller les talents confiés
+        à chaque enfant.
+      </p>
+    </div>
+    <img src="images/oba-bg.webp" class="rounded-2xl shadow fade-right" />
+  </div>
+</section>
+
+<!-- ================= COACHS ================= -->
+<section class="bg-gray-50 py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-extrabold text-secondary text-center fade-up">Notre encadrement</h3>
+
+    <div class="grid md:grid-cols-2 gap-12 mt-16">
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-left">
+        <img src="images/coach-jimmy.webp" class="h-72 w-full object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-primary">Coach Jimmy</h4>
+          <p class="text-secondary font-semibold">Fondateur & Coach principal</p>
+          <blockquote class="mt-4 italic text-gray-700">
+            “La façon de faire une chose est la façon de tout faire.”
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-lg overflow-hidden fade-right">
+        <img src="images/coach-michel.webp" class="h-72 w-full object-cover" />
+        <div class="p-6">
+          <h4 class="text-xl font-bold text-primary">Coach Michel</h4>
+          <p class="text-secondary font-semibold">Coach assistant</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAMMES ================= -->
+<section id="programmes" class="max-w-6xl mx-auto px-6 py-24">
+  <h3 class="text-3xl font-extrabold text-secondary text-center fade-up">Programmes d’entraînement</h3>
+
+  <div class="grid md:grid-cols-2 gap-10 mt-16">
+    <div class="bg-white border-l-8 border-secondary rounded-2xl shadow p-8 fade-left">
+      <h4 class="font-bold text-xl text-primary">U-16 à U-21</h4>
+      <ul class="mt-4 text-gray-700 list-disc list-inside">
+        <li>Mercredi soir</li>
+        <li>Vendredi soir</li>
+        <li>Samedi matin – Issam Borne 10</li>
+      </ul>
+    </div>
+
+    <div class="bg-white border-l-8 border-secondary rounded-2xl shadow p-8 fade-right">
+      <h4 class="font-bold text-xl text-primary">U-8 à U-15</h4>
+      <ul class="mt-4 text-gray-700 list-disc list-inside">
+        <li>Samedi matin – Dream School Station Axx</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="text-center mt-12">
+    <a href="modalites.pdf" class="inline-block bg-secondary text-white px-8 py-3 rounded-full font-bold">
+      Modalités & Clauses (PDF)
+    </a>
+  </div>
+</section>
+
+<!-- ================= EVENEMENTS ================= -->
+<section id="evenements" class="max-w-6xl mx-auto px-6 py-24">
+  <div class="text-center">
+    <h3 class="text-3xl font-extrabold text-secondary fade-up">Événements à l’OBA</h3>
+    <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+      Découvrez nos temps forts : camps de vacances, matchs de championnats et sélections pour faire grandir nos jeunes talents.
+    </p>
+  </div>
+
+  <div class="grid md:grid-cols-3 gap-8 mt-14">
+    <article class="bg-white rounded-3xl shadow overflow-hidden fade-left">
+      <img src="images/moment1.jpg" alt="Camp de vacances" class="w-full h-52 object-cover" />
+      <div class="p-8">
+        <h4 class="text-xl font-bold text-primary">Camps de vacances</h4>
+        <p class="mt-4 text-gray-700">
+          Des stages intensifs pendant les congés scolaires pour travailler le jeu, la condition physique et l’esprit d’équipe.
+        </p>
+      </div>
+    </article>
+
+    <article class="bg-white rounded-3xl shadow overflow-hidden fade-up">
+      <img src="images/moment4.jpeg" alt="Match de championnat" class="w-full h-52 object-cover" />
+      <div class="p-8">
+        <h4 class="text-xl font-bold text-primary">Matchs de championnats</h4>
+        <p class="mt-4 text-gray-700">
+          Nos équipes participent à des compétitions structurées, où chaque match est l’occasion de progresser ensemble.
+        </p>
+      </div>
+    </article>
+
+    <article class="bg-white rounded-3xl shadow overflow-hidden fade-right">
+      <img src="images/moment8.webp" alt="Sélection de joueurs" class="w-full h-52 object-cover" />
+      <div class="p-8">
+        <h4 class="text-xl font-bold text-primary">Sélections</h4>
+        <p class="mt-4 text-gray-700">
+          Des sessions de repérage et des évaluations pour sélectionner les meilleurs profils et les préparer aux défis futurs.
+        </p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section id="gallery" class="bg-primary py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <h3 class="text-3xl font-extrabold text-white text-center fade-up">Moments vécus à l’OBA</h3>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-14">
+      <img src="images/moment1.jpg" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment2.jpg" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment3.jpeg" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment4.jpeg" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment5.jpeg" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment6.jpeg" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment7.webp" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment8.webp" class="rounded-xl hover:scale-105 transition" />
+      <img src="images/moment9.webp" class="rounded-xl hover:scale-105 transition" />
+    </div>
+  </div>
+</section>
+
+<!-- ================= SPONSORS ================= -->
+<section class="bg-white py-24">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h3 class="text-3xl font-extrabold text-secondary fade-up">Nos sponsors</h3>
+
+    <div class="grid sm:grid-cols-3 gap-10 mt-14 items-center">
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-lg fade-left">
+        <img src="images/andy%20jo.png" alt="Logo Andy Jo" class="mx-auto h-24 object-contain" />
+      </div>
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-lg fade-up">
+        <img src="images/fecabasket.png" alt="Logo FECABASKET" class="mx-auto h-24 object-contain" />
+      </div>
+      <div class="bg-gray-50 rounded-3xl p-8 shadow-lg fade-right">
+        <img src="images/oba-bg.webp" alt="Partenaire OBA" class="mx-auto h-24 object-contain" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="bg-gray-50 py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h3 class="text-3xl font-extrabold text-secondary">Inscription rapide via WhatsApp</h3>
+      <p class="mt-4 text-gray-700 max-w-2xl mx-auto">
+        Envoyez directement les informations de votre enfant au coach sur WhatsApp.
+      </p>
+    </div>
+
+    <form id="whatsappForm" class="grid gap-6 md:grid-cols-2" onsubmit="return sendWhatsAppMessage()">
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Nom complet de l’enfant</span>
+        <input type="text" id="childName" required class="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 focus:border-primary focus:outline-none" placeholder="Ex : Jean Dupont" />
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Âge</span>
+        <input type="number" id="childAge" min="5" max="18" required class="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 focus:border-primary focus:outline-none" placeholder="Ex : 12" />
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Taille</span>
+        <input type="text" id="childHeight" required class="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 focus:border-primary focus:outline-none" placeholder="Ex : 1,55 m" />
+      </label>
+
+      <label class="block">
+        <span class="text-gray-700 font-semibold">Téléphone du tuteur</span>
+        <input type="tel" id="tutorPhone" required class="mt-2 w-full rounded-2xl border border-gray-300 px-4 py-3 focus:border-primary focus:outline-none" placeholder="Ex : 228 90 00 00 00" />
+      </label>
+
+      <div class="md:col-span-2 text-center">
+        <button type="submit" class="inline-flex items-center justify-center bg-secondary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-red-700 transition">
+          Envoyer sur WhatsApp
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  function sendWhatsAppMessage() {
+    const coachWhatsApp = '237656668210'; // Remplace ce numéro par celui du coach
+    const name = document.getElementById('childName').value.trim();
+    const age = document.getElementById('childAge').value.trim();
+    const height = document.getElementById('childHeight').value.trim();
+    const phone = document.getElementById('tutorPhone').value.trim();
+
+    if (!name || !age || !height || !phone) {
+      alert('Merci de remplir tous les champs.');
+      return false;
+    }
+
+    const message = `Bonjour Coach,\nJe souhaite inscrire mon enfant : \nNom complet : ${name}\nÂge : ${age}\nTaille : ${height}\nTéléphone du tuteur : ${phone}`;
+    const url = `https://wa.me/${coachWhatsApp}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+    return false;
+  }
+</script>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-primary text-white py-6 text-center">
+  © 2025 Odza Basketball Academy – Tous droits réservés
+</footer>
+
+</body>
+</html>
